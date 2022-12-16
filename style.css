@@ -1,0 +1,53 @@
+body {
+    background-image: url(Images/shutterstock.webp);
+    color: white;
+    font-size: x-large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    list-style-type: none;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    color: white;
+    justify-content: space-around;
+    font-size: x-large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: black;
+    block-size: 100px;
+    align-items: center;
+    margin-bottom: 100px;
+    border-radius: 25px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    color: white;
+    justify-content: space-around;
+    font-size: x-large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: black;
+    block-size: auto;
+    align-items: center;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-bottom: 100px;
+    border-radius: 25px;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    color: white;
+    justify-content: space-around;
+    font-size: x-large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: black;
+    block-size: 100px;
+    align-items: center;
+    border-radius: 25px;
+}

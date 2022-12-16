@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : ven. 16 déc. 2022 à 13:54
+-- Généré le : ven. 16 déc. 2022 à 18:41
 -- Version du serveur : 5.7.36
 -- Version de PHP : 7.4.26
 
@@ -24,21 +24,6 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Structure de la table `commentaires`
---
-
-DROP TABLE IF EXISTS `commentaires`;
-CREATE TABLE IF NOT EXISTS `commentaires` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `commentaire` text CHARACTER SET utf8 NOT NULL,
-  `id_utilisateur` int(11) NOT NULL,
-  `date` datetime NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=20 DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
 -- Structure de la table `utilisateurs`
 --
 
@@ -55,7 +40,7 @@ CREATE TABLE IF NOT EXISTS `utilisateurs` (
 --
 
 INSERT INTO `utilisateurs` (`id`, `login`, `password`) VALUES
-(3, 'laplateforme', 'starter2022'),
+(3, 'admin', 'starter2022'),
 (4, 'rabaou.ibrahim@laplateforme.io', 'a'),
 (5, 'rabaou.ibrahim@laplateforme.io', 'starter2022');
 COMMIT;

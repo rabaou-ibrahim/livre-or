@@ -21,7 +21,7 @@ session_start();
         }
            
         elseif ($_SESSION['loggedin'] = true) { // Si cette session existe alors l'utilisateur est connecté,
-        echo '  <header>
+          echo '<header>
                 <li><a href="index.php" target=_blank><b>Accueil</a>
                 <li><a href="profil.php">Profil</a>
                 <li><a href="livreor.php">Livre or</a>
@@ -38,9 +38,9 @@ session_start();
                 <u>Commentaires</u> : 
                 <br> 
                 <br> ';
-            echo("</main>");
+                '</main>';
 
-        echo '<div class="commentaires">';
+                '<div class="commentaires">';
 
             include('Inserts/connexion_db.php');
 
@@ -51,12 +51,16 @@ session_start();
             if (mysqli_num_rows($result) > 0) {
 
                 while ($row = $result->fetch_assoc()) {
-                        echo("Posté le ");
+                        echo("<i>Posté le ");
                         echo ($row['date']);
                         echo (" par ");
                         echo ($row['id_utilisateur']);
-                        echo (" : ");
+                        echo (" : </i>");
+                        echo ("<br>");
+                        echo ("<br>");
+                        '<table>';
                         echo($row['commentaire']);
+                        '</table>';
                         echo ("<br>");
                         echo ("<br>");
                 }
@@ -69,7 +73,5 @@ session_start();
         } 
         
     ?>
-
-    </main>
 
 </body>

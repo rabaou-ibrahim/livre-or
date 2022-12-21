@@ -55,6 +55,11 @@ main {
     border-radius: 25px;
 }
 
+table {
+    border-style: double;
+    border-color: aliceblue;
+}
+
 footer {
     display: flex;
     flex-direction: row;

@@ -17,6 +17,12 @@ session_start();
 
 <?php
 
+if (!isset($_SESSION) || !isset($_SESSION['login']) || !isset($_SESSION['password']) || !isset($_SESSION['id'])) {
+  header('location:warning.php'); // Si on n'a pas de variables sessions la personne n'est pas connectée, on la redirige vers la page warning.php
+}
+
+else {
+
 if (isset($_POST['Nouveau_login_confirmer'])) {
   // Si l'utilisateur valide une modification de login sans rien taper on lui renvoie 
   // le message d'erreur de la ligne 24 :
@@ -48,6 +54,8 @@ if (isset($_POST['Nouveau_login_confirmer'])) {
   }
 
 } 
+
+}
 
 $conn->close();
 

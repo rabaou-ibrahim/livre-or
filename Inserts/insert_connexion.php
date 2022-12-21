@@ -29,13 +29,35 @@ if (isset($_POST['Envoyer'])) {
     // 3ème condition : Si le champ login n'est pas rempli
 
     elseif (empty($login)) { 
-        echo("Le login doit être renseigné");
+        echo("<main> 
+        <p> Le login doit être renseigné. </p> 
+            Retournez à la page de connexion ou à l'index :
+            <br>
+            <br>
+            <a href='../connexion.php'<li> Retenter de me connecter</li></a>
+            <br>
+            <br>
+            <a href='../index.php'<li> Page d'accueil </li></a>
+            <br>
+            <br>
+            </main>");
     }
 
     // 4ème condition : Si le mot de passe n'a pas été tapé
 
     elseif (empty($password)) {
-        echo ("Le mot de passe doit être renseigné");
+        echo ("<main> 
+        <p> Le mot de passe doit être renseigné. </p> 
+            Retournez à la page de connexion ou à l'index :
+            <br>
+            <br>
+            <a href='../connexion.php'<li> Retenter de me connecter</li></a>
+            <br>
+            <br>
+            <a href='../index.php'<li> Page d'accueil </li></a>
+            <br>
+            <br>
+            </main>");
     } 
     
         // Sinon (càd dans le cas où les 2 champs sont remplis)

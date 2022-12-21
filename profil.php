@@ -23,11 +23,11 @@ session_start();
 
     <header>
         <li><a href="index.php" target=_blank><b>Accueil</li></a>
-        <li><a href="index.php" ><?php if (isset($_POST['Logout'])) { include 'deconnexion.php'; } ?><b>Se déconnecter</b></a></li>
+        <li><a href="index.php"><?php if (isset($_POST['Logout'])) { include 'deconnexion.php'; } ?><b>Se déconnecter</b></a></li>
     </header>
 
     <main>
-    <a href="livreor.php" target="_blank"><p>Cliquez ici pour accéder à votre livre d'or</p></a>
+    <a href="livreor.php"><p>Cliquez ici pour accéder à votre livre d'or</p></a>
     <p>OU modifiez vos codes d'accès en dessous </p>
 
     <div class="formulaire">

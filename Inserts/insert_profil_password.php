@@ -16,13 +16,21 @@
 
 session_start();
 
-if (isset($_POST['Modifier_password'])) {
+if (!isset($_SESSION) || !isset($_SESSION['login']) || !isset($_SESSION['password']) || !isset($_SESSION['id'])) {
+    header('location:warning.php'); // Si on n'a pas de variables sessions la personne n'est pas connectée, on la redirige vers la page warning.php
+  } 
+  
+else {
+
+    if (isset($_POST['Modifier_password'])) {
         echo ('<form action="insert_profil_edit_password.php" method="post">');
         echo ('<li>Nouveau mot de passe : </li><br><input type="text" name="Nouveau_password_confirm" autocomplete="off"/> <input type="submit" name="Nouveau_password_confirmer" value="Confirmer">');
-        echo('<br>');
+        echo ('<br>');
         echo ('<br>');
         echo ('</form>');
     }
+
+}
 
 ?>
 

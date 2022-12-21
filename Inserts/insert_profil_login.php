@@ -14,14 +14,22 @@
 // Cet autre fichier modifie la ligne dans la bdd
 
 session_start();
-    
+
+if (!isset($_SESSION) || !isset($_SESSION['login']) || !isset($_SESSION['password']) || !isset($_SESSION['id'])) {
+    header('location:warning.php'); // Si on n'a pas de variables sessions la personne n'est pas connectée, on la redirige vers la page warning.php
+} 
+  
+else {
+
     if (isset($_POST['Modifier_login'])) {
         echo ('<form action="insert_profil_edit_login.php" method="post">');
         echo ('<li>Nouveau login : </li><br><input type="text" name="Nouveau_login_confirm" autocomplete="off"/> <input type="submit" name="Nouveau_login_confirmer" value="Confirmer">');
-        echo('<br>');
+        echo ('<br>');
         echo ('<br>');
         echo ('</form>');
     }
+
+}
     
 ?>
 
